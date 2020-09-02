@@ -1,11 +1,7 @@
-package org.mx.processlistservice;
-
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.eclipse.jetty.server.AbstractNetworkConnector;
-import org.mx.processlistservice.resource.ProcessListResource;
-import org.mx.processlistservice.configuration.ProcessListServiceConfiguration;
 
 public class ProcessListServiceApplication extends Application<ProcessListServiceConfiguration> {
   Environment environment;
@@ -32,6 +28,6 @@ public class ProcessListServiceApplication extends Application<ProcessListServic
 
   public int getPort() {
     return ((AbstractNetworkConnector) environment.getApplicationContext()
-    .getServer().getConnectors()[0]).getPort();
+    .getServer().getConnectors()[0]).getLocalPort();
   }
 }

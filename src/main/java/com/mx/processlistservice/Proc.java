@@ -1,5 +1,3 @@
-package org.mx.processlistservice.model;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Proc {

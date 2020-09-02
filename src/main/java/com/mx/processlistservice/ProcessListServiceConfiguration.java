@@ -1,9 +1,7 @@
-package org.mx.processlistservice.configuration;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
-import io.dropwizard.jetty.HttpConnectorFactory;
-import io.dropwizard.server.DefaultServerFactory;
+import io.dropwizard.jetty.*;
+import io.dropwizard.server.*;
 
 public class ProcessListServiceConfiguration extends Configuration {
     private int maxLength;
