@@ -1,4 +1,4 @@
-package org.mx.jairaviles.processlistservice.model;
+package org.mx.processlistservice.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

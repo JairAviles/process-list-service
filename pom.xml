@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.mx.jairaviles</groupId>
+    <groupId>org.mx</groupId>
     <artifactId>processlist-service</artifactId>
     <version>1.0</version>
 
@@ -28,7 +28,7 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                org.mx.jairaviles.processlistservice.ProcessListServiceApplication
+                                org.mx.processlistservice.ProcessListServiceApplication
                             </mainClass>
                         </manifest>
                     </archive>
@@ -62,11 +62,11 @@
         </plugins>
         <resources>
             <resource>
-                <directory>${project.basedir}/org/mx/jairaviles/processlistservice
+                <directory>${project.basedir}/org/mx/processlistservice
                 </directory>
             </resource>
         </resources>
-        <sourceDirectory>${project.basedir}/org/mx/jairaviles/processlistservice
+        <sourceDirectory>${project.basedir}/org/mx/processlistservice
         </sourceDirectory>
     </build>
 

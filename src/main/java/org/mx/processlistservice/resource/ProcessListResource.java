@@ -1,10 +1,10 @@
-package org.mx.jairaviles.processlistservice.application;
+package org.mx.processlistservice.resource;
 
 import com.codahale.metrics.annotation.Timed;
 import com.google.common.base.Optional;
 import com.google.common.io.CharStreams;
 
-import org.mx.jairaviles.processlistservice.model.Proc;
+import org.mx.processlistservice.model.Proc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

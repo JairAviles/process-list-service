@@ -1,13 +1,14 @@
-package org.mx.jairaviles.processlistservice;
+package org.mx.processlistservice;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import org.mx.jairaviles.processlistservice.application.ProcessListResource;
-import org.mx.jairaviles.processlistservice.configuration.ProcessListServiceConfiguration;
+import org.eclipse.jetty.server.AbstractNetworkConnector;
+import org.mx.processlistservice.resource.ProcessListResource;
+import org.mx.processlistservice.configuration.ProcessListServiceConfiguration;
 
 public class ProcessListServiceApplication extends Application<ProcessListServiceConfiguration> {
-
+  Environment environment;
   public static void main(String []args) throws Exception {
     new ProcessListServiceApplication().run(args);
   }
@@ -25,6 +26,12 @@ public class ProcessListServiceApplication extends Application<ProcessListServic
     final ProcessListResource resource = new ProcessListResource(
         configuration.getMaxLength()
     );
+    this.environment = environment;
     environment.jersey().register(resource);
+  }
+
+  public int getPort() {
+    return ((AbstractNetworkConnector) environment.getApplicationContext()
+    .getServer().getConnectors()[0]).getPort();
   }
 }
